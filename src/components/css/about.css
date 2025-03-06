@@ -1,0 +1,216 @@
+/* 🔹 Full-Width Poster Section */
+.poster-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  .poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full coverage */
+  }
+  
+  /* 🔹 Overlay Content */
+  .poster-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #777;
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  /* 🔹 Enhanced Headings with 3D Effect */
+  .about-heading {
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D Shadow Effect */
+  }
+  
+  
+  
+  
+  .about-subheading {
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  
+  /* 🔹 Certification Section */
+  
+  .certification-title{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .certification-section {
+    padding: 60px 0;
+  }
+  
+  .certification-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .certification-image {
+    width: 350px;
+    margin-bottom: 25px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2)); /* Subtle Shadow */
+  }
+  
+  .certification-text {
+    max-width: 750px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  /* 🔹 Mission & Vision Cards */
+  .about-card {
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    background: #f8f9fa;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .about-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 768px) {
+    .poster-overlay {
+      left: 5%;
+      width: 90%;
+      text-align: center;
+    }
+  
+    .about-heading {
+      font-size: 40px;
+    }
+  
+    .about-subheading {
+      font-size: 22px;
+    }
+  
+    .about-text {
+      font-size: 18px;
+    }
+  }
+  
+  
+  
+  /* ============ */
+  
+  /* Roadmap Section */
+  .roadmap-section {
+    /* background-color: #f8f9fa; */
+    position: relative;
+  }
+  
+  /* Roadmap Title */
+  .roadmap-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .roadmap-subtitle {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 2rem;
+  }
+  
+  /* Roadmap Container */
+  .roadmap-container {
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  /* Timeline Line */
+  .roadmap-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff6a00, #ee0979); /* Fiery Orange to Deep Pink */
+    box-shadow: 0px 0px 15px rgba(255, 105, 0, 0.7); /* Glowing Effect */
+    transform: translateX(-50%);
+  }
+  
+  
+  /* Roadmap Step */
+  .roadmap-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  
+  .roadmap-step.left {
+    flex-direction: row-reverse;
+  }
+  
+  .roadmap-step.right {
+    flex-direction: row;
+  }
+  
+  /* Step Icon - Futuristic & Elegant */
+  .roadmap-icon {
+    width: 65px;
+    height: 65px;
+    background: radial-gradient(circle, #ff4e50, #fc913a); /* Smooth Red-Orange Blend */
+    color: #fff;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 4px 15px rgba(255, 78, 80, 0.6); /* Soft Glow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect for Icon */
+  .roadmap-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 78, 80, 0.9);
+  }
+  
+  /* Step Card */
+  .roadmap-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+    margin: 0 1.5rem;
+  }
+  
+  .roadmap-card h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .roadmap-card p {
+    color: #555;
+    font-size: 1rem;
+  }
+  

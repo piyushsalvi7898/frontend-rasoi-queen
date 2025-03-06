@@ -1,0 +1,190 @@
+/* Dashboard Container */
+.dashboard {
+    background: linear-gradient(to right, #d3d3d3, #f1f1f1); 
+    min-height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  /* Dashboard Heading */
+  .dashboard-heading {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333333; /* Dark Gray */
+    background: linear-gradient(90deg, #767171, #cccccc); /* Smooth Light Black to Gray */
+    padding: 20px 30px; /* Adjusted padding */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 60px auto 20px; /* Centered */
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Smooth fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fullscreen Center */
+  .fullscreen-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../assets/images/ppp2.jpg")  center/cover no-repeat ;
+    height: 80vh;
+    margin-top: 60px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Soft shadow with better contrast */
+    border-radius: 12px; /* Slightly more rounded corners for a premium feel */
+    padding: 30px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Info Cards */
+  .info-card {
+    border-radius: 12px;
+    padding: 25px;
+    /* background: #ffffff; */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2);
+  
+  }
+  
+  
+  /* Card Title */
+  .info-card .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333; /* Dark Gray */
+    border-bottom: 2px solid  #333333; ;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  
+  /* Table Styling */
+  .custom-table {
+    margin-top: 10px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-collapse: collapse;
+  }
+  
+  /* Custom Table Header */
+  .custom-table th {
+    background: linear-gradient(90deg, #b6afaf, #ffffff); /* Dark Gray to White */
+    color: #333333; /* Darker Gray for better contrast */
+    font-size: 16px;
+    padding: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 4px solid #dddddd; /* Light border for a soft effect */
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  }
+  
+  /* Table Cells */
+  .custom-table td {
+    font-size: 15px;
+    text-align: center;
+    padding: 12px;
+    color: #444;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Alternate Row Colors */
+  .custom-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Light gray */
+  }
+  
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Pure white */
+  }
+  
+  /* Hover Effect */
+  .custom-table tbody tr:hover {
+    background-color: #e3f2fd; /* Soft blue */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Table Borders */
+  .custom-table th,
+  .custom-table td {
+    border-right: 1px solid #ddd;
+  }
+  
+  .custom-table th:last-child,
+  .custom-table td:last-child {
+    border-right: none;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Custom Button */
+  .custom-btn {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    background:#333333;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .custom-btn:hover {
+    background: #666666; /* Darker Gray on Hover */
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(102, 102, 102, 0.4);
+  }
+  
+  
+  .custom-input {
+    border: 2px solid #444; /* Blue border */
+    border-radius: 6px; /* Smooth rounded corners */
+    padding: 12px;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .custom-input:focus {
+    border-color: #444; /* Darker blue on focus */
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .white{
+    color: white;
+  }

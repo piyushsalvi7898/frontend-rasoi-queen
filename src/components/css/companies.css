@@ -1,0 +1,50 @@
+.image-gallery-container {
+    padding: 40px 20px; /* Increased padding for a spacious layout */
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 50px; /*Margin T*/
+  }
+  
+  .gallery-title {
+    margin-bottom: 30px; /* Space below the title */
+    font-size: 36px; /* Larger title font size */
+    font-weight: bold; /* Bold font weight */
+    color: #343a40; /* Darker text color */
+    text-align: center; /* Center the title */
+    text-transform: uppercase; /* Uppercase letters for emphasis */
+    letter-spacing: 1px; /* Spacing between letters */
+  }
+  
+  /* Card styles */
+  .image-card {
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .image-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  }
+  
+  .image {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without stretching */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .image-gallery-container {
+        display: flex; /* Use flexbox for alignment */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+  
+    .image-card {
+        width: 90%; /* Set a width for cards on mobile */
+        margin-bottom: 20px; /* Space between cards */
+    }
+  }

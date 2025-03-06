@@ -1,0 +1,202 @@
+/* Unique container for Graph component */
+.graph-container {
+    margin-top: 80px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  /* Stats Cards */
+  .graph-container .stats-card {
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1), -4px -4px 15px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border: none;
+    padding: 15px;
+  }
+  
+  .graph-container .stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2), -6px -6px 20px rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Stats Icons */
+  .graph-container .stats-card div {
+    font-size: 3rem; /* Increased icon size */
+    color: #4F46E5;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Stats Titles */
+  .graph-container .stats-card h5 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Stats Changes */
+  .graph-container .stats-card span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  /* Charts */
+  .graph-container .chart-card {
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1), -4px -4px 15px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .graph-container .chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2), -6px -6px 20px rgba(255, 255, 255, 0.9);
+  }
+  
+  .graph-container .chart-container {
+    height: 230px;
+  }
+  
+  /* Info Cards (Tasks & Orders) */
+  .graph-container .info-card {
+    border-radius: 10px;
+    padding: 15px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1), -4px -4px 15px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .graph-container .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2), -6px -6px 20px rgba(255, 255, 255, 0.9);
+  }
+  
+  .graph-container .info-card h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .graph-container .info-card ul {
+    padding-left: 15px;
+  }
+  
+  .graph-container .info-card ul li {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .graph-container .stats-card {
+      text-align: center;
+    }
+  
+    .graph-container .stats-card div {
+      font-size: 2.5rem;
+    }
+  
+    .graph-container .stats-card h5 {
+      font-size: 1.5rem;
+    }
+  
+    .graph-container .chart-container {
+      height: 200px;
+    }
+  }
+  
+
+
+
+
+
+
+  /* Unique Styling for Dashboard Title */
+.dashboard-title {
+    font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 10px;
+  background: linear-gradient(to right, #333333, #555555);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  /* margin-top: 50px; */
+  }
+
+
+ 
+  .dashboard-title::after {
+  content: "";
+  width: 200px;
+  height: 3px;
+  background: #333333;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  transition:
+    width 0.3s ease-in-out,
+    background 0.3s ease-in-out;
+}
+ 
+
+/* Hover Effect */
+
+.dashboard-title:hover::after {
+  width: 300px; /* Expands the underline */
+  background: #555555; /* Changes the color slightly */
+}
+
+
+
+
+
+
+
+.dashboard-card {
+  border-radius: 12px;
+  background: #ffffff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task-list, .order-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li, .order-list li {
+  padding: 8px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.task-list li:last-child, .order-list li:last-child {
+  border-bottom: none;
+}
+
+.text-primary {
+  color: #007bff !important;
+}
+
+.text-success {
+  color: #28a745 !important;
+}

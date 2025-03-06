@@ -1,0 +1,541 @@
+/* Ensure the entire page takes full height */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*  Background Image */
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  /* 40% of screen height */
+  background: url("../../assets/images/background3.png") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/*  Logo Styling (Fixed at bottom border of background) */
+.about-logo {
+  position: absolute;
+  bottom: -90px;
+  /* Moves half outside */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Centers horizontally */
+  width: 150px;
+  /* Adjust size as needed */
+  height: auto;
+  z-index: 1;
+  /* Keeps it above the background */
+  border-radius: 50%;
+  /* Makes it circular */
+  box-shadow: 25px 10px 20px rgba(194, 179, 179, 0.3);
+  /* Soft shadow */
+  background: rgba(194, 179, 179, 0.3);
+  /* Ensures clean edges */
+  padding: 2px;
+  /* Adds space inside border */
+}
+
+/*  Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-logo {
+    width: 120px;
+    /* Smaller logo for small screens */
+    bottom: -90px;
+    /* Moves half outside */
+  }
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  /* Dark gray for contrast */
+}
+
+.rasoi {
+  color: #d32f2f;
+  /* Deep red for a premium look */
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 5px rgba(211, 47, 47, 0.5);
+}
+
+h1 span {
+  background: linear-gradient(to right,
+      #7e0b0b,
+      #ff5e62);
+  /* Red gradient effect */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ourproduct {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  /* Dark gray for elegance */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.ourproduct::after {
+  content: "";
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(to right,
+      #ff6600,
+      #ff3300);
+  /* Orange-Red gradient */
+  display: block;
+  margin: 5px auto 0;
+  border-radius: 2px;
+}
+
+.sub-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  /* Dark gray for contrast */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  background: linear-gradient(to right, #a0a0a0, #606060);
+  /* Gray gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px;
+  border-bottom: 1px solid #606060;
+  display: inline-block;
+}
+
+/* Make the main container take full height */
+.home-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding-top: 50vh;
+  /* Moves content below the background */
+}
+
+.product-card {
+  border: none !important;
+  /* Removes the card border */
+  box-shadow: none !important;
+  /* Removes any shadow */
+  /* background-color: black; */
+  height: 500px;
+}
+
+.product-image-home {
+  width: 100%;
+  /* Adjust width as needed */
+  height: 300px;
+  /* Set fixed height */
+  object-fit: contain;
+  /* Ensures image fits without cropping */
+  border-radius: 10px;
+  /* Adds a slight border radius */
+}
+
+/* ========================== */
+
+.poster-image {
+  width: 100%;
+  height: auto;
+  /* Maintains aspect ratio */
+  object-fit: cover;
+  /* Covers the area without distortion */
+  max-height: 500px;
+  /* Optional: limits height */
+  margin-bottom: 20px;
+  /* Adds space around the image */
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.small-container {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.left-box,
+.right-box {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.right-box ul {
+  padding-left: 0;
+}
+
+.right-box li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.certificate-container {
+  display: flex;
+  justify-content: center;
+  /* Center the images horizontally */
+  align-items: center;
+  /* Center the images vertically */
+  margin-top: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  /* Align images in center */
+  align-items: center;
+  gap: 20px;
+  /* Small space between certificate and QR code */
+}
+
+.certificate-box,
+.qr-code-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate-img,
+.qr-code-img {
+  max-width: 250px;
+  /* Adjust image size */
+  height: auto;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+  padding: 20px;
+  background: linear-gradient(to right,
+      #d3d3d3,
+      #f1f1f1);
+  /* Gradient background */
+  border-radius: 10px;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  /* Soft shadow */
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 10px;
+  height: 250px;
+  gap: 20px;
+  /* border: 2px solid  rgba(0, 0, 0, 0.1); */
+}
+
+.image-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.shop-image {
+  width: 300px;
+  height: auto;
+  margin: 0 10px;
+  border-radius: 8px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.3),
+    0 52px 40px rgba(0, 0, 0, 0.15);
+  /* Layered shadow for depth */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.shop-image:hover {
+  transform: scale(1.05);
+  /* Slight zoom effect */
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.4),
+    0 16px 50px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow on hover */
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #000, #555);
+  /* Black to gray gradient */
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.scroll-btn:hover {
+  background: linear-gradient(135deg, #333, #777);
+  /* Dark gray to light gray */
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.scroll-btn:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.scroll-btn i {
+  font-size: 22px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.scroll-btn:hover i {
+  transform: scale(1.2);
+}
+
+/* Add a hover effect to navigation links */
+.navbar .nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #f8f9fa;
+  /* Light color for the text */
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+  color: #ff5733;
+  text-align: center;
+}
+
+/* Underline effect on hover */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: gray;
+  /* Underline color */
+
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover::after {
+  width: 90%;
+}
+
+.hoverline .nav-link {
+  transition: color 0.3s ease;
+}
+
+.hoverline .nav-link:hover {
+  color: #ff5733 !important;
+  /* Replace with your desired hover color */
+}
+
+.ourmotto {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.custom-product-card {
+  background-color: none;
+}
+
+.custom-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  /* Limits image width */
+  height: auto;
+  margin: 12px auto 0 auto;
+  /* Adds 10px margin on top */
+  overflow: hidden;
+}
+
+.custom-product-image,
+.overlay-image {
+  width: 100%;
+  /* Makes sure the image scales properly */
+  height: auto;
+  max-height: 300px;
+  /* Restrict height to prevent overly large images */
+  object-fit: contain;
+  /* Ensures images fit without distortion */
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* Hide hover image initially */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-image-container:hover .overlay-image {
+  opacity: 1;
+  /* Show hover image on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-image-container {
+    max-width: 180px;
+    /* Reduce image size for mobile */
+  }
+
+  .custom-product-image,
+  .overlay-image {
+    max-height: 200px;
+  }
+}
+
+.gallery-heading {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  /* Dark gray for elegance */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+  position: relative;
+  display: inline-block;
+  /* padding-bottom: 8px; */
+}
+
+.gallery-heading::after {
+  content: "";
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(to right,
+      #ff6600,
+      #ff3300);
+  /* Orange-Red gradient */
+  display: block;
+  margin: 5px auto 0;
+  border-radius: 2px;
+}
+
+
+
+
+/* Testimonials Section */
+
+/* Title Styling */
+.testimonials-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+text-align: center;
+  /* letter-spacing: 2px; */
+}
+
+/* Carousel */
+.testimonials-carousel {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: #fff;
+  color: #333;
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Quote Icons */
+.quote-icon {
+  font-size: 2rem;
+  /* color: #ff6a00; */
+  color: rgb(219, 219, 15);
+  margin: 0 0.5rem;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #444;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+/* Testimonial Author */
+.testimonial-author {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  /* color: #ff6a00; */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+}

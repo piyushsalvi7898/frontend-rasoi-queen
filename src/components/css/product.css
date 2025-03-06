@@ -1,0 +1,216 @@
+/* General Styling */
+body {
+    background: linear-gradient(
+      to right,
+      #d3d3d3,
+      #f1f1f1
+    ); /* Light Gray to Soft White */
+  }
+  
+  /* Product Section */
+  .productmargintop {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+    background: linear-gradient(to right, #333333, #555555);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+  
+  /* Underline Effect */
+  .productmargintop::after {
+    content: "";
+    width: 100px;
+    height: 3px;
+    background: #333333;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition:
+      width 0.3s ease-in-out,
+      background 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .productmargintop:hover::after {
+    width: 300px; /* Expands the underline */
+    background: #555555; /* Changes the color slightly */
+  }
+  
+  /* Product Card */
+  .product-card {
+    /* background-color: #d3d3d3; */
+    background-color: #ffffff;
+    /* background: linear-gradient(
+      to right,
+      #ff9a9e, 
+      #fad0c4,  
+      #fad0c4
+    ); */
+  
+    /* background: linear-gradient(
+    to right,
+    #2c3e50,  
+    #bdc3c7   
+  ); */
+  
+    box-shadow: 0 6px 12px 4px rgba(0, 0, 0, 1); /* Added spread (4px) */
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #000; /* Full black border for a sharper look */
+    transition:
+      transform 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+    height: 100%;
+  }
+  
+  /* Hover Effect */
+  .product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* Even stronger black shadow */
+    transform: translateY(-5px);
+  }
+  
+  /* Product Image */
+  .product-image {
+    width: 100%;
+    height: 160px;
+    object-fit: contain; /* Ensures the full image is visible */
+    border-radius: 5px;
+  }
+  
+  /* Product Name */
+  .product-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Weight Styling */
+  /* Product Weight & Price */
+  .product-weight {
+    font-size: 14px;
+    color: #333;
+    background: #f1f1f1;
+    /* background-color: #c6c2da; */
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3px 45px;
+    font-weight: 500;
+  }
+  
+  .span2 {
+    color: #e74c3c;
+    font-weight: 600;
+  }
+  
+  /* Price Styling */
+  .product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: red;
+    margin-top: 5px;
+  }
+  
+  /* Bootstrap Grid Adjustments */
+  @media (max-width: 1024px) {
+    .product-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Dropdown Container */
+  .dropdown-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    width: 100%;
+  }
+  
+  /* Stylish Dropdown */
+  .product-dropdown {
+    text-align: center;
+    width: 85%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #444;
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    appearance: none; /* Removes default dropdown styles */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 40px; /* Space for the arrow */
+  }
+  
+  /* Custom Dropdown Arrow */
+  .dropdown-container::after {
+    content: "\25BC"; /* Unicode for ▼ arrow */
+    font-size: 16px;
+    color: #444;
+    position: absolute;
+    right: 10%;
+    pointer-events: none; /* Prevent interaction */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .product-dropdown:hover,
+  .product-dropdown:focus {
+    border-color: #e74c3c;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.5);
+    transform: scale(1.02);
+  }
+  
+  /* Change Arrow Color on Hover */
+  .dropdown-container:hover::after {
+    color: #e74c3c;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .product-dropdown {
+      width: 90%;
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .dropdown-container::after {
+      right: 8%;
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,63 @@
+
+.navbar {
+    min-height: 60px; 
+  
+  }
+
+/* Navbar Toggle Button */
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animation for Open/Close */
+.navbar-toggler.open .top-bar {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler.open .middle-bar {
+  opacity: 0;
+}
+
+.navbar-toggler.open .bottom-bar {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Smooth Navbar Open/Close */
+.collapse-animation {
+  transition: max-height 0.5s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.collapse-animation.show {
+  max-height: 500px;
+}
+
+.certificate-logo {
+    position: relative;
+    height: 50px; /* Navbar ke andar adjust */
+    margin-left: 0px; /* Left side spacing */
+    z-index: 1000; /* Ensure it stays on top */
+    border-radius: 50px; /* Slightly rounded corners */
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.6); /* White Shadow on All Sides */
+    object-fit: contain; /* Image distorting na ho */
+    pointer-events: none;
+  }
+  

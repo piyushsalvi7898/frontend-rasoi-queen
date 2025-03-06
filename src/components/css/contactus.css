@@ -1,0 +1,145 @@
+.contact-container {
+    width: 100%;
+    max-width: 100%;
+    /* height: 100%; */
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 60px;
+    background: linear-gradient(to right, #d3d3d3, #f1f1f1); /* Light Gray to Soft White */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    /* border-radius: 15px; */
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333333; /* Dark Gray */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+
+.contact-form,
+.appointment-form {
+    flex: 1;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    background: #f5f5f5; /* Light Gray Background */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    margin: 0;
+}
+
+.contact-form:hover,
+.appointment-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form h2,
+.appointment-form h2 {
+    font-size: 2rem;
+    color: #666666; /* Medium Gray */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-form form,
+.appointment-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.appointment-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #cccccc; /* Light Gray Border */
+    background: #fafafa; /* Lighter Gray */
+    color: #333;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.appointment-form input:focus,
+.contact-form textarea:focus {
+    border-color: #999999; /* Medium Gray */
+    box-shadow: 0px 4px 10px rgba(153, 153, 153, 0.3);
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form button,
+.appointment-form button {
+    background:#333333; /* Medium Gray Button */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(136, 136, 136, 0.3);
+}
+
+.contact-form button:hover,
+.appointment-form button:hover {
+    background: #666666; /* Darker Gray on Hover */
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(102, 102, 102, 0.4);
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form,
+    .appointment-form {
+        width: 90%;
+    }
+}
+
+
+.contact-info-uppermargin {
+    margin-top: 50px;
+}
+
+
+/*============ */
+.text-centre {
+    font-size: 1.8rem; /* Slightly larger font for emphasis */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center align text */
+    color: #007bff; /* Attractive blue color */
+    text-transform: uppercase; /* Uppercase for a modern look */
+    letter-spacing: 1px; /* Improve readability */
+    padding: 10px 0; /* Add some spacing */
+    border-bottom: 3px solid #007bff; /* Underline effect */
+    display: inline-block; /* Keeps the underline limited to text width */
+    background: linear-gradient(to right, #ff8a00, #e52e71); /* Gradient for a stylish effect */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+}
